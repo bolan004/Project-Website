@@ -1,0 +1,264 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OCTech Website Build (v1) | Website Foundation Build</title>
+  <meta name="description" content="OCTech Website Build v1: a fast, professional website launch with payments readiness and SEO fundamentals. Starter, Growth, and Scale packages." />
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#121826;
+      --card2:#0f1522;
+      --text:#e8eef7;
+      --muted:#a9b7cc;
+      --line:rgba(255,255,255,.10);
+      --accent:#7aa2ff;
+      --accent2:#55d6be;
+      --warn:#ffcd61;
+      --radius:18px;
+      --shadow:0 18px 50px rgba(0,0,0,.45);
+      --sans:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      --mono:ui-monospace,Menlo,Consolas,monospace;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background:radial-gradient(1200px 700px at 20% -10%, rgba(122,162,255,.18), transparent 50%),
+                 radial-gradient(900px 600px at 90% 10%, rgba(85,214,190,.12), transparent 55%),
+                 var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:34px 18px 80px}
+    .topbar{
+      display:flex;gap:12px;align-items:center;justify-content:space-between;
+      padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius);
+      background:rgba(18,24,38,.72);backdrop-filter:blur(10px);
+    }
+    .brand{display:flex;gap:10px;align-items:center}
+    .mark{
+      width:38px;height:38px;border-radius:12px;
+      background:linear-gradient(135deg, rgba(122,162,255,.95), rgba(85,214,190,.95));
+      box-shadow:0 10px 22px rgba(0,0,0,.35);
+    }
+    .brand h1{font-size:14px;margin:0;letter-spacing:.4px}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+    .btns{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:10px 14px;border-radius:14px;border:1px solid var(--line);
+      text-decoration:none;font-weight:650;font-size:13px;
+      background:rgba(255,255,255,.02);
+    }
+    .btn.primary{
+      border-color:rgba(122,162,255,.35);
+      background:rgba(122,162,255,.14);
+    }
+    .hero{padding:30px 6px 10px;display:grid;grid-template-columns:1.25fr .75fr;gap:16px;align-items:start}
+    .hero h2{font-size:42px;line-height:1.06;margin:10px 0 10px}
+    .hero p{color:var(--muted);font-size:16px;line-height:1.55;margin:0}
+    .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 0}
+    .pill{
+      padding:8px 10px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(255,255,255,.02);font-size:12px;color:var(--muted)
+    }
+    .card{
+      border:1px solid var(--line);border-radius:var(--radius);
+      background:rgba(18,24,38,.72);backdrop-filter:blur(10px);
+      box-shadow:var(--shadow);
+    }
+    .heroCard{padding:16px}
+    .stat{display:flex;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02);margin-top:10px}
+    .stat b{font-size:12px}
+    .stat span{color:var(--muted);font-size:12px}
+    .grid{display:grid;gap:16px}
+    .grid.two{grid-template-columns:repeat(2, minmax(0,1fr))}
+    .grid.three{grid-template-columns:repeat(3, minmax(0,1fr))}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid.two,.grid.three{grid-template-columns:1fr}
+      .hero h2{font-size:34px}
+    }
+    .section{margin-top:18px;padding:18px}
+    .section h3{margin:0 0 10px;font-size:16px;letter-spacing:.3px}
+    .section p{margin:0;color:var(--muted);line-height:1.6}
+    ul{margin:10px 0 0;padding:0 0 0 18px;color:var(--muted);line-height:1.7}
+    li{margin:6px 0}
+    .pricing{padding:18px}
+    .tier{
+      padding:16px;border:1px solid var(--line);border-radius:var(--radius);
+      background:rgba(255,255,255,.02)
+    }
+    .tier h4{margin:0 0 6px;font-size:15px}
+    .tag{display:inline-block;margin-top:6px;font-size:12px;color:var(--muted)}
+    .price{margin:12px 0 10px;font-size:22px;font-weight:800}
+    .fine{font-size:12px;color:var(--muted);margin-top:10px}
+    .badge{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;
+      border:1px solid rgba(85,214,190,.35);background:rgba(85,214,190,.12)
+    }
+    .badge.warn{border-color:rgba(255,205,97,.4);background:rgba(255,205,97,.12)}
+    .cta{
+      margin-top:18px;padding:18px;border:1px solid rgba(122,162,255,.35);
+      background:rgba(122,162,255,.10);border-radius:var(--radius)
+    }
+    .cta h3{margin:0 0 8px;font-size:18px}
+    .cta p{margin:0 0 12px;color:var(--muted)}
+    .footer{margin-top:18px;color:var(--muted);font-size:12px;padding:16px 6px}
+    .kbd{font-family:var(--mono);font-size:12px;color:rgba(232,238,247,.9)}
+    .sep{height:1px;background:var(--line);margin:14px 0}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <h1>Operational Core Technologies</h1>
+          <p>OCTech Website Build (v1)</p>
+        </div>
+      </div>
+      <div class="btns">
+        <a class="btn" href="#packages">View Packages</a>
+        <a class="btn primary" href="#contact">Request a Quote</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="card section">
+        <span class="badge">Consulting-led • Fast launch • Payments-ready</span>
+        <h2>Website Foundation Build</h2>
+        <p>
+          Launch a professional website that builds credibility, clearly communicates your services,
+          and is ready to support future sales—without agency overhead or ambiguous scope.
+        </p>
+        <div class="pillrow">
+          <div class="pill">Core pages: Home / About / Services / Contact</div>
+          <div class="pill">Stripe integration for payments readiness</div>
+          <div class="pill">SEO fundamentals (titles + indexing)</div>
+          <div class="pill">Clear scope + predictable delivery</div>
+        </div>
+
+        <div class="cta" id="contact">
+          <h3>Ready to launch?</h3>
+          <p>
+            Email us with your business name, services, and preferred package. We’ll confirm scope,
+            timeline, and next steps within 1 business day.
+          </p>
+          <a class="btn primary" href="mailto:hello@octechservices.com?subject=Website%20Build%20Inquiry%20(v1)&body=Hi%20OCTech%2C%0A%0ABusiness%20Name%3A%0AServices%3A%0APackage%20(Starter%2FGrowth%2FScale)%3A%0ADomain%2FHosting%20Status%3A%0ASpecial%20Notes%3A%0A%0AThank%20you%2C">Email: hello@octechservices.com</a>
+          <div class="fine">Tip: include any brand colors, logo files, and examples of websites you like.</div>
+        </div>
+      </div>
+
+      <div class="card heroCard">
+        <h3 style="margin:0 0 6px;font-size:16px;">What to expect</h3>
+        <p style="margin:0;color:var(--muted);line-height:1.6">
+          A structured delivery approach designed to minimize rework and keep scope controlled.
+        </p>
+
+        <div class="stat"><b>Typical timeline</b><span>~1–3 weeks (by tier)</span></div>
+        <div class="stat"><b>Engagement style</b><span>Fixed scope + defined outputs</span></div>
+        <div class="stat"><b>Foundation included</b><span>Stripe + SEO baseline</span></div>
+        <div class="stat"><b>Scalability</b><span>Designed for future upgrades</span></div>
+
+        <div class="sep"></div>
+
+        <h3 style="margin:0 0 6px;font-size:16px;">Deliverables</h3>
+        <ul>
+          <li>Published website (core pages)</li>
+          <li>Stripe connected & validated</li>
+          <li>SEO fundamentals configured</li>
+          <li>Completion summary + handoff notes</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card pricing" id="packages">
+      <h3 style="margin:0 0 10px;font-size:16px;">Packages</h3>
+      <p style="margin:0 0 14px;color:var(--muted);line-height:1.6">
+        Choose the tier that matches your current needs. Upgrade paths are available post-launch.
+      </p>
+
+      <div class="grid three">
+        <div class="tier">
+          <h4>Starter (Good)</h4>
+          <div class="tag">Best for: fast, professional launch</div>
+          <div class="price">$1,250–$1,500</div>
+          <ul>
+            <li>Hosting recommendation</li>
+            <li>Template selection + setup</li>
+            <li>Core pages (4)</li>
+            <li>Stripe connection</li>
+            <li>SEO fundamentals</li>
+          </ul>
+          <div class="fine"><span class="kbd">Effort:</span> ~7 hours • <span class="kbd">Timeline:</span> ~1 week</div>
+        </div>
+
+        <div class="tier">
+          <h4>Growth (Better)</h4>
+          <div class="tag">Best for: leads + analytics readiness</div>
+          <div class="price">$2,250–$2,750</div>
+          <ul>
+            <li>Everything in Starter</li>
+            <li>Conversion-focused copy refinement</li>
+            <li>Contact form + routing</li>
+            <li>Analytics + Search Console</li>
+            <li>1 revision round</li>
+          </ul>
+          <div class="fine"><span class="kbd">Effort:</span> ~10–12 hours • <span class="kbd">Timeline:</span> 1–2 weeks</div>
+        </div>
+
+        <div class="tier">
+          <h4>Scale (Best)</h4>
+          <div class="tag">Best for: growth, ads, future portal</div>
+          <div class="price">$3,500–$4,500</div>
+          <ul>
+            <li>Everything in Growth</li>
+            <li>CTA + page-flow optimization</li>
+            <li>Stripe checkout configuration</li>
+            <li>Blog/Resources page setup</li>
+            <li>2 revision rounds + handoff guide</li>
+          </ul>
+          <div class="fine"><span class="kbd">Effort:</span> ~15–18 hours • <span class="kbd">Timeline:</span> 2–3 weeks</div>
+        </div>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="grid two">
+        <div class="section" style="padding:0">
+          <h3>What’s included in every engagement</h3>
+          <ul>
+            <li>Defined scope and acceptance criteria</li>
+            <li>Delivery checklist + QA gate</li>
+            <li>Payments readiness (Stripe)</li>
+            <li>SEO baseline configuration</li>
+          </ul>
+        </div>
+        <div class="section" style="padding:0">
+          <h3>Common add-ons (post-launch)</h3>
+          <ul>
+            <li>Advanced SEO + local SEO</li>
+            <li>Ongoing maintenance & content updates</li>
+            <li>Customer portal (auth + database)</li>
+            <li>Security hardening & monitoring</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      © <span id="yr"></span> Operational Core Technologies (OCTech). Website Build v1 baseline.
+      <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+    </div>
+  </div>
+</body>
+</html>
