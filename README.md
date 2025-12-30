@@ -1,11 +1,10 @@
-cat <<'EOF' > playbooks/website-build/README.md
 # OCTech Website Build — Playbook (v1)
 
 **Offering Name:** OCTech Website Build  
 **Version:** v1.0  
 **Status:** Locked (Baseline)  
 **Owner:** Operational Core Technologies (OCTech)  
-**Last Updated:** 2025-12-29  
+**Last Updated:** 2025-01-XX  
 
 ---
 
@@ -189,5 +188,4 @@ If it’s not in this document, it is not part of v1.
 ---
 
 END OF DOCUMENT
-EOF
 
