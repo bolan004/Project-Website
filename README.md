@@ -1,191 +1,173 @@
-# OCTech Website Build — Playbook (v1)
+# OCTech Website Build v1  
+## Internal Playbook & SOP
 
-**Offering Name:** OCTech Website Build  
-**Version:** v1.0  
-**Status:** Locked (Baseline)  
-**Owner:** Operational Core Technologies (OCTech)  
-**Last Updated:** 2025-01-XX  
+**Service Name:** Website Foundation Build  
+**Version:** v1.0 (Locked)  
+**Owner:** Operational Core Technologies  
+**Status:** Approved for Sales & Delivery
 
 ---
 
 ## 1. Purpose
 
-This playbook defines the standardized delivery model for the OCTech Website Build service.
+This playbook defines the standardized delivery model for the OCTech Website Foundation Build (v1).
 
-It serves as the single source of truth for:
-- Service delivery
-- Consultant onboarding
-- Scope control
-- Quality assurance
-- Audit and review
+The objective is to:
+- Deliver a professional, payments-ready website
+- Maintain fixed scope and predictable effort
+- Enable repeatable delivery across clients
+- Support sales, onboarding, and QA
 
-All engagements delivered under OCTech Website Build v1 must follow this playbook unless an approved exception is documented.
-
----
-
-## 2. Service Overview
-
-The OCTech Website Build is a fixed-scope, consulting-led website foundation service designed to deliver a professional, payments-ready website with clear scope, predictable delivery, and upgrade paths.
-
-### Core Objectives
-- Establish online credibility
-- Enable payments readiness (Stripe)
-- Implement SEO fundamentals
-- Provide a clean foundation for future growth
-
-### Target Clients
-- Small businesses
-- Professional services firms
-- Startups requiring a fast, credible web presence
+This document is the **authoritative reference** for v1 delivery.
 
 ---
 
-## 3. In-Scope vs Out-of-Scope
+## 2. Service Summary
 
-### In Scope (All Tiers)
-- Hosting evaluation and recommendation
-- Template selection and configuration
-- Core pages:
-  - Home
-  - About
-  - Services
-  - Contact
-- Stripe connection (payments readiness)
-- SEO baseline (titles and meta descriptions)
-- Cross-device QA
-- Delivery handoff and sign-off
+**What we deliver**
+- Professional website with core pages
+- Stripe integration for payments readiness
+- SEO fundamentals for discoverability
+- QA review and completion handoff
 
-### Out of Scope (Unless Explicitly Added)
+**What we do not deliver (v1)**
 - Custom application development
-- Advanced SEO or content strategy
+- Advanced SEO or paid ads
 - Ongoing maintenance
-- Security monitoring
-- Customer portals or authentication
-- Paid advertising or campaign setup
-
-Out-of-scope items may be offered as post-launch add-ons.
+- Legal, compliance, or accessibility certification
 
 ---
 
-## 4. Delivery Model (v1)
+## 3. Packages (External)
 
-Delivery follows a linear, checklist-driven model to minimize rework.
+- **Starter (Good)**  
+  Fast launch, professional presence
 
-### Phases
-1. Discovery
-2. Build
-3. Content
-4. Integrations
-5. QA
-6. Handoff
+- **Growth (Better)**  
+  Lead capture, analytics, refinement
 
-Each phase has defined entry criteria, tasks, and exit conditions.
+- **Scale (Best)**  
+  Conversion optimization and growth foundation
 
----
-
-## 5. Roles & Responsibilities
-
-### OCTech (Consultant)
-- Owns delivery execution
-- Manages scope and timeline
-- Performs configuration, QA, and handoff
-- Requests formal sign-off
-
-### Client
-- Provides brand inputs and access
-- Reviews content in a timely manner
-- Confirms completion and acceptance
-
-Delays in client input may impact delivery timelines.
+> Scope boundaries are enforced per tier.  
+> Any expansion requires a change order or upsell.
 
 ---
 
-## 6. Jira Execution Model
+## 4. Delivery Model
 
-Each engagement is instantiated using the Website Build v1 Jira CSV.
+### Phase 1: Discover & Confirm
+**Objective**
+- Lock scope, tier, and inputs
 
-### Jira Structure
-- 1 Epic: Website Foundation Build
-- Multiple Tasks mapped to delivery phases
+**Key Activities**
+- Intake review
+- Hosting recommendation
+- Access validation
 
-The Jira CSV located at:
-
-/ops/jira/octech-website-build-v1-jira-import.csv
-
-is the canonical execution template and must not be modified without versioning.
-
----
-
-## 7. Quality Gates & Acceptance Criteria
-
-### QA Checklist (Required)
-- Mobile and desktop rendering verified
-- Navigation and links validated
-- Primary CTA tested
-- Stripe connection validated (test mode)
-- SEO titles and meta descriptions set
-
-### Acceptance
-Delivery is considered complete when:
-- Website is published
-- Stripe connection is validated
-- Client receives completion summary
-- Client approval or sign-off is requested
+**Exit Criteria**
+- Scope confirmed
+- Timeline agreed
+- Access available
 
 ---
 
-## 8. Commercial Guardrails
+### Phase 2: Design & Content
+**Objective**
+- Establish structure and messaging
 
-- Fixed scope per selected tier
-- Revisions limited by tier
-- Any scope expansion requires written approval
-- Add-ons are quoted separately post-launch
+**Key Activities**
+- Template selection
+- Navigation setup
+- Draft core page content
 
-This protects delivery velocity and margin.
-
----
-
-## 9. Versioning & Change Control
-
-### Current Version
-- v1.0 — Baseline launch offering
-
-### Future Enhancements (Examples)
-- v1.1: Pricing refinements, minor process optimizations
-- v2.0: Portal-ready builds, advanced analytics, security bundles
-
-Changes must be documented, versioned, and communicated prior to use.
+**Exit Criteria**
+- All pages drafted
+- Content aligned to services
 
 ---
 
-## 10. Reuse & Scaling Guidance
+### Phase 3: Build & Integrate
+**Objective**
+- Make the site functional and sales-ready
 
-This playbook is designed for reuse across clients and rapid onboarding of new consultants.
+**Key Activities**
+- Publish pages
+- Connect Stripe
+- Configure SEO basics
 
-Do not fork or customize per client.  
-Instantiate via Jira and apply client-specific inputs at execution time.
-
----
-
-## 11. Audit & Review
-
-This document may be used for:
-- Internal reviews
-- Delivery audits
-- Scope disputes
-- Client clarification
-
-Any deviations must be documented.
+**Exit Criteria**
+- Stripe validated
+- Pages render correctly
 
 ---
 
-## 12. Final Notes
+### Phase 4: QA & Handoff
+**Objective**
+- Confirm readiness and close engagement
 
-This playbook represents the authoritative v1 delivery standard for the OCTech Website Build offering.
+**Key Activities**
+- Cross-device QA
+- Final checks
+- Completion summary
 
-If it’s not in this document, it is not part of v1.
+**Exit Criteria**
+- Site live
+- Client notified
+- Engagement closed
 
 ---
 
-END OF DOCUMENT
+## 5. Tools & Assets
+
+**Required**
+- Website platform (client-selected)
+- Stripe
+- Jira (delivery tracking)
+
+**Internal Assets**
+- SOW template
+- Jira import CSV
+- Public service page (HTML)
+
+---
+
+## 6. Quality Gates
+
+Before closeout, confirm:
+- All core pages are live
+- Stripe is connected and validated
+- SEO titles are configured
+- Navigation and CTAs work on mobile + desktop
+
+---
+
+## 7. Change Control
+
+- v1 scope is fixed
+- Any additional requests:
+  - Require written approval
+  - May be handled as:
+    - Upsell
+    - v1.1 enhancement
+    - Separate engagement
+
+---
+
+## 8. KPIs (Internal)
+
+Track across engagements:
+- Delivery duration vs target
+- Rework requests
+- Scope change frequency
+- Client approval cycle time
+
+---
+
+## 9. Versioning
+
+- **v1.0** — Initial public release (locked)
+- **v1.1** — Enhancements tracked post-launch
+
+Do not modify v1 assets without explicit version bump.
 
